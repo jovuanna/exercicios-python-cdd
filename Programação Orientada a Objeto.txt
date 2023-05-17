@@ -1,0 +1,19 @@
+Programação Orientada a Objeto
+
+- É um metódo para organizar melhor o código e fazer com que o entendimento do código seja mais simples e é basicamente focado em dois parâmetros: Classe e Objeto.
+
+Os principais pilares são:
+- Objeto: os objetos são formados a partir das classes e atribuídos características a ele. (atribuições)
+- Mensagem: forma de comunicação de um objeto com outro. 
+- Classe:  as classe podem ser explicados como a forma do objeto (variáveis).
+- Abstração: não precisar saber exatamente como cada coisa funciona.
+- Encapsulamento: é a proteção de um atributo da classe.
+- Herança: são subclasses das classes mães, que podem pegar todos ou alguns métodos.
+- Polimorfismo: são as modifcações feitas pelas subclasses. (reescreve o método)
+   EX:    Classe - Animal
+	Subclasses - Gato, Cachorro
+          Método - Comunicação
+    Polimorfismo - Gato(mia), Cachorro(late)
+Os ítens que compõe uma classe, são: 
+- Atributos
+- Métodos
