@@ -55,18 +55,33 @@ class Contas:
                 break
 
 
-
     def sacar(self):
-        while self.status_conta == True and self.saldo > 0:
+        while self.status_conta == True:
             opcao = input("Deseja sacar dinheiro? ")
             if opcao == "Sim" or opcao == "sim" or opcao == "S" or opcao == "s" or opcao == "SIM":
                 saque = float(input("Quanto deseja sacar da sua conta? "))
                 self.saldo -= saque
-                print(f"Seu saldo agora é {self.saldo}.")
-                break
+                if saque > self.saldo:
+                    print("Saque maior que o saldo")
+                    break
+                else:
+                    print("Saque efetuado")
+                    break
             else:
                 break
 
+
+
+    def limite(self):
+            limite_conta = 1000
+            while self.status_conta == True:
+                opcao = input("Deseja ativar o cheque especial? ")
+                print("Seu limite de cheque especial é R$1000.00")
+                if opcao == "Sim" or opcao == "sim" or opcao == "S" or opcao == "s" or opcao == "SIM":
+                    limite_ativo = float(input("Quanto deseja liberar do cheque especial? "))
+                    limite_ativo = limite_conta - limite_ativo
+                    print(f"Saldo do cheque especial é {limite_ativo}")
+                    break
 
 
     def saldo_conta(self):
@@ -79,6 +94,7 @@ class Contas:
             else:
                 print("Fim do programa!")
                 break
+
 def introducao():
     print('-'*20)
     print("       BANCO")
@@ -87,12 +103,13 @@ def introducao():
     print('=-'*10)
 
 introducao()
-conta1 = Contas(12345, "Giovanna Giselli", 0, "Corrente", status_conta=True)
+conta1 = Contas(12345, "Giovanna Giselli", 100, "Corrente", status_conta=True)
 conta1.dados()
 conta1.desativar()
 conta1.depositar()
 conta1.sacar()
 conta1.saldo_conta()
+conta1.limite()
 
 introducao()
 conta2 = Contas(67894, "Isadora dos Santos", 4567.54, "Poupança", status_conta=True)
